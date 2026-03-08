@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Андреева · Менеджер проектов · 2026</title>
-    <!-- шрифт Inter + иконки Font Awesome 6 (Sharp Light для более тонкого стиля) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
@@ -16,7 +15,7 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #eaf0f0;  /* мягкий серо-зеленый фон */
+            background-color: #eaf0f0;
             font-family: 'Inter', sans-serif;
             line-height: 1.5;
             color: #1f2e3a;
@@ -31,33 +30,42 @@
             display: grid;
             grid-template-columns: 290px 1fr;
             overflow: hidden;
-            transition: all 0.2s;
         }
-        /* левая колонка — глубокий тёмно-зелёный */
         .sidebar {
-            background-color: #1f3b34;      
+            background-color: #1f3b34;
             color: #e2f0e8;
-            padding: 2.2rem 1.6rem;
-            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+        }
+        .profile-photo {
+            line-height: 0;
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .photo-placeholder {
+            width: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .photo-placeholder img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        .sidebar-content {
+            padding: 0 1.6rem 2.2rem 1.6rem;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
-        .profile-photo {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-        .photo-placeholder {
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .photo-placeholder img {
-            object-fit: cover;
-        }
         .sidebar-section {
-            border-bottom: 1px solid #346656;  /* тонкая линия светлее фона */
+            border-bottom: 1px solid #346656;
             padding-bottom: 1.5rem;
         }
         .sidebar-section:last-child {
@@ -69,14 +77,14 @@
             font-weight: 600;
             font-size: 0.85rem;
             letter-spacing: 1.8px;
-            color: #bcd9cd;                /* мягкий светлый зеленый */
+            color: #bcd9cd;
             margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
             gap: 8px;
         }
         .section-title i {
-            color: #a2c9b7;                 /* иконки в заголовках — нежный зеленый */
+            color: #a2c9b7;
             font-size: 1rem;
             width: 20px;
         }
@@ -90,7 +98,7 @@
         }
         .contact-item i {
             width: 22px;
-            color: #a2c9b7;                 /* все иконки контактов в тон */
+            color: #a2c9b7;
             font-size: 1.1rem;
         }
         .contact-item a {
@@ -108,7 +116,7 @@
             gap: 0.6rem;
         }
         .badge {
-            background: #2d594a;             /* темно-зеленый для бейджей */
+            background: #2d594a;
             color: white;
             padding: 0.3rem 1rem;
             border-radius: 30px;
@@ -140,7 +148,6 @@
             color: #e0f3e8;
             font-weight: 500;
         }
-        /* правая колонка — светлая */
         .main {
             background: white;
             padding: 2.2rem 2.5rem;
@@ -148,7 +155,7 @@
         .name-title h1 {
             font-size: 3rem;
             font-weight: 700;
-            color: #1d352e;                 /* глубокий зеленый для имени */
+            color: #1d352e;
             letter-spacing: -1px;
             line-height: 1.1;
             margin-bottom: 0.4rem;
@@ -157,20 +164,20 @@
             display: flex;
             gap: 1.8rem;
             flex-wrap: wrap;
-            color: #3f6b5b;                  /* спокойный зеленый для подзаголовка */
+            color: #3f6b5b;
             font-weight: 500;
             margin-top: 0.2rem;
             font-size: 1rem;
         }
         .desired-position {
-            background-color: #f2f9f5;        /* очень светлый зеленый фон */
+            background-color: #f2f9f5;
             padding: 1.4rem 2rem;
             border-radius: 24px;
             margin: 1.8rem 0 2.2rem 0;
             display: grid;
             grid-template-columns: 1fr auto;
             align-items: center;
-            border-left: 6px solid #2e6d58;   /* яркий зеленый акцент */
+            border-left: 6px solid #2e6d58;
             box-shadow: 0 4px 12px rgba(21, 66, 48, 0.08);
         }
         .position-title {
@@ -181,7 +188,7 @@
         .position-salary {
             font-weight: 700;
             font-size: 1.6rem;
-            color: #1f6e4f;                   /* сочный зеленый */
+            color: #1f6e4f;
             background: white;
             padding: 0.4rem 1.4rem;
             border-radius: 40px;
@@ -197,7 +204,7 @@
             font-weight: 500;
         }
         .detail-item i {
-            color: #2e6d58;                   /* зеленые иконки деталей */
+            color: #2e6d58;
             width: 24px;
         }
         .section-main-title {
@@ -205,14 +212,14 @@
             font-size: 1.5rem;
             color: #1f3b34;
             margin: 2.2rem 0 1.2rem 0;
-            border-bottom: 3px solid #d0e6dc; /* светлая линия под заголовками */
+            border-bottom: 3px solid #d0e6dc;
             padding-bottom: 0.3rem;
             display: flex;
             align-items: center;
             gap: 0.7rem;
         }
         .section-main-title i {
-            color: #2e6d58;                    /* иконки разделов — темный зеленый */
+            color: #2e6d58;
             font-size: 1.6rem;
         }
         .exp-item {
@@ -223,8 +230,8 @@
         }
         .exp-date {
             font-weight: 600;
-            color: #2e6d58;                     /* текст дат зеленый */
-            background: #ebf6f0;                 /* очень светлый фон */
+            color: #2e6d58;
+            background: #ebf6f0;
             padding: 0.4rem 1rem;
             border-radius: 40px;
             font-size: 0.9rem;
@@ -257,7 +264,7 @@
             content: "▹";
             position: absolute;
             left: 0;
-            color: #2e6d58;                     /* маркеры списка зеленые */
+            color: #2e6d58;
             font-weight: 700;
         }
         .edu-item {
@@ -285,7 +292,7 @@
             font-weight: 600;
         }
         .about-me {
-            background: #f1faf5;                 /* мягкий зеленоватый фон */
+            background: #f1faf5;
             padding: 1.7rem 2rem;
             border-radius: 24px;
             margin: 1.5rem 0 1rem;
@@ -301,7 +308,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
-            background: #eff9f3;                 /* светлая плашка */
+            background: #eff9f3;
             padding: 1rem 1.5rem;
             border-radius: 50px;
             font-size: 0.9rem;
@@ -325,80 +332,123 @@
             border-bottom: 1px dotted #90bba8;
         }
         @media (max-width:850px) {
-            .resume { grid-template-columns: 1fr; }
-            .desired-position { grid-template-columns: 1fr; }
-            .job-details { grid-column: span 1; }
+            .resume { 
+                grid-template-columns: 1fr; 
+            }
+            .desired-position { 
+                grid-template-columns: 1fr; 
+            }
+            .job-details { 
+                grid-column: span 1; 
+            }
+            .sidebar-content {
+                padding-top: 1.5rem;
+            }
         }
         @media (max-width:550px) {
-            .exp-item { grid-template-columns: 1fr; }
-            .exp-date { text-align: left; display: inline-block; width: auto; }
-            .name-title h1 { font-size: 2.5rem; }
-            .main { padding: 1.5rem; }
+            .exp-item { 
+                grid-template-columns: 1fr; 
+                gap: 0.8rem;
+            }
+            .exp-date { 
+                text-align: left; 
+                display: inline-block; 
+                width: auto; 
+                margin-bottom: 0.2rem;
+            }
+            .name-title h1 { 
+                font-size: 2.5rem; 
+            }
+            .main { 
+                padding: 1.5rem; 
+            }
+            .desired-position {
+                padding: 1.2rem;
+            }
+            .position-title {
+                font-size: 1.5rem;
+            }
+            .position-salary {
+                font-size: 1.4rem;
+                padding: 0.2rem 1rem;
+                justify-self: start;
+            }
+        }
+        @media (max-width:380px) {
+            .subheadline {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .courses-grid {
+                grid-template-columns: 1fr;
+                gap: 0.3rem;
+            }
+            .courses-grid span:first-child {
+                font-weight: 700;
+            }
         }
     </style>
 </head>
 <body>
 <div class="resume">
-    <!-- левая колонка (контакты, языки, твердые навыки) -->
     <div class="sidebar">
         <div class="profile-photo">
             <div class="photo-placeholder">
-                <!-- ваше фото с темно-зеленым костюмом идеально вписывается -->
                 <img src="ava_irina_rec.png" alt="Фото Ирина">
             </div>
         </div>
-        <div class="sidebar-section">
-            <div class="section-title"><i class="fas fa-address-card"></i> Контакты</div> <!-- иконка заменена -->
-            <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>+7 (931) 342-72-97 MAX</span></div>
-            <div class="contact-item"><i class="fab fa-telegram"></i><a href="https://t.me/machtbetty" target="_blank">@machtbetty</a></div>
-            <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:i_kustova@internet.ru">i_kustova@internet.ru</a></div>
-            <div class="contact-item"><i class="fas fa-location-dot"></i><span>Санкт-Петербург</span></div>
-            <div class="contact-item"><i class="fas fa-passport"></i><span>РФ</span></div> <!-- иконка точнее -->
-        </div>
-        <div class="sidebar-section">
-            <div class="section-title"><i class="fas fa-globe"></i> Языки</div>
-            <div class="lang-item"><span>Русский</span> <span class="lang-level">Родной</span></div>
-            <div class="lang-item"><span>Английский</span> <span class="lang-level">B1</span></div>
-            <div class="lang-item"><span>Немецкий</span> <span class="lang-level">B1</span></div>
-        </div>
-        <div class="sidebar-section">
-            <div class="section-title"><i class="fas fa-code"></i> Стек технологий</div>
-            <div class="skill-tags">
-                <span class="skill-tag">HTML / CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">PHP</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">WordPress</span>
-                <span class="skill-tag">Tilda / Marquiz</span>
-                <span class="skill-tag">Salebot / Textback / Chat2Desk / Bothelp</span>
-                <span class="skill-tag">CRM: Битрикс24 / AmoCRM</span>
-                <span class="skill-tag">Аналитика Roistat</span>
-                <span class="skill-tag">SMART</span>
-                <span class="skill-tag">AI Prompt Engineer</span>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <div class="section-title"><i class="fas fa-address-card"></i> Контакты</div>
+                <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>+7 (931) 342-72-97 MAX</span></div>
+                <div class="contact-item"><i class="fab fa-telegram"></i><a href="https://t.me/machtbetty" target="_blank">@machtbetty</a></div>
+                <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:i_kustova@internet.ru">i_kustova@internet.ru</a></div>
+                <div class="contact-item"><i class="fas fa-location-dot"></i><span>Санкт-Петербург</span></div>
+                <div class="contact-item"><i class="fas fa-passport"></i><span>РФ</span></div>
             </div>
-        </div>
-        <div class="sidebar-section">
-            <div class="section-title"><i class="fas fa-certificate"></i> Курсы</div>
-            <div class="badge-list">
-                <span class="badge">JS: продвинутый 2024</span>
-                <span class="badge">Веб-вёрстка 2023</span>
-                <span class="badge">Граф. дизайн 2022</span>
-                <span class="badge">AI Prompt Engineer 2025</span>
+            <div class="sidebar-section">
+                <div class="section-title"><i class="fas fa-globe"></i> Языки</div>
+                <div class="lang-item"><span>Русский</span> <span class="lang-level">Родной</span></div>
+                <div class="lang-item"><span>Английский</span> <span class="lang-level">B1</span></div>
+                <div class="lang-item"><span>Немецкий</span> <span class="lang-level">B1</span></div>
             </div>
-        </div>
-        <!-- личные навыки, тонкие иконки + адаптация -->
-        <div class="sidebar-section">
-            <div class="section-title"><i class="fas fa-user-check"></i> Личные навыки</div>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Самоорганизация</span>
-                <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Ориентация на измеримый результат</span>
-                <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Командная коммуникация</span>
-                <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Декомпозиция задач</span>
+            <div class="sidebar-section">
+                <div class="section-title"><i class="fas fa-code"></i> Стек технологий</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML / CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">Tilda / Marquiz</span>
+                    <span class="skill-tag">Salebot / Textback / Chat2Desk / Bothelp</span>
+                    <span class="skill-tag">CRM: Битрикс24 / AmoCRM</span>
+                    <span class="skill-tag">Аналитика Roistat</span>
+                    <span class="skill-tag">SMART</span>
+                    <span class="skill-tag">AI Prompt Engineer</span>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-title"><i class="fas fa-certificate"></i> Курсы</div>
+                <div class="badge-list">
+                    <span class="badge">JS: продвинутый 2024</span>
+                    <span class="badge">Веб-вёрстка 2023</span>
+                    <span class="badge">Граф. дизайн 2022</span>
+                    <span class="badge">AI Prompt Engineer 2025</span>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="section-title"><i class="fas fa-user-check"></i> Личные навыки</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                    <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Самоорганизация</span>
+                    <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Ориентация на измеримый результат</span>
+                    <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Командная коммуникация</span>
+                    <span class="skill-tag" style="background:transparent; border-color:#5d8f7a;">Декомпозиция задач</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- правая колонка (опыт, образование) -->
     <div class="main">
         <div class="name-title">
             <h1>Ирина Андреева</h1>
@@ -409,7 +459,6 @@
             </div>
         </div>
 
-        <!-- Желаемая позиция / блок слегка осовременен -->
         <div class="desired-position">
             <div>
                 <div class="position-title">Менеджер проектов</div>
@@ -423,10 +472,8 @@
             </div>
         </div>
 
-        <!-- ОПЫТ РАБОТЫ -->
         <div class="section-main-title"><i class="fas fa-briefcase"></i> Опыт работы — 8 лет 8 месяцев</div>
 
-        <!-- ChinaToday -->
         <div class="exp-item">
             <div class="exp-date">февраль 2023 — март 2026 <br><span style="font-weight:400;">3 года 2 мес.</span></div>
             <div>
@@ -441,7 +488,6 @@
             </div>
         </div>
 
-        <!-- Denero -->
         <div class="exp-item">
             <div class="exp-date">май 2022 — январь 2023 <br><span style="font-weight:400;">9 мес.</span></div>
             <div>
@@ -454,7 +500,6 @@
             </div>
         </div>
 
-        <!-- Инфинитив -->
         <div class="exp-item">
             <div class="exp-date">июль 2019 — апрель 2022 <br><span style="font-weight:400;">2 года 10 мес.</span></div>
             <div>
@@ -467,7 +512,6 @@
             </div>
         </div>
 
-        <!-- Ранний опыт (компактно) -->
         <div class="exp-item">
             <div class="exp-date">авг 2018 — фев 2019</div>
             <div><span class="exp-company">РТ Инвест Транспортные Системы</span> — специалист по работе с клиентами</div>
@@ -477,7 +521,6 @@
             <div><span class="exp-company">СПб ГКУ МФЦ Петроградского района</span> — инженер-инспектор</div>
         </div>
 
-        <!-- Образование -->
         <div class="section-main-title"><i class="fas fa-graduation-cap"></i> Образование</div>
         <div class="edu-item"><span class="edu-year">2021</span> <span><span class="institution">РАНХиГС</span> — Юриспруденция (международное право)</span></div>
         <div class="edu-item"><span class="edu-year">2018</span> <span><span class="institution">РАНХиГС</span> — Государственное и муниципальное управление</span></div>
@@ -490,7 +533,6 @@
             <span class="course-year">2022</span> <span><strong>Графический дизайн + верстка</strong> · СПбГУПТД, WorldSkills</span>
         </div>
 
-        <!-- Обо мне -->
         <div class="section-main-title"><i class="fas fa-bullseye"></i> Профессиональный профиль</div>
         <div class="about-me">
             <p><strong>Я менеджер проектов с техническими навыками, специализируюсь на веб-разработке.</strong> Владею вёрсткой, базовым backend, настройкой интеграций, а также навыком составления промтов для AI-генерации контента и кода.</p>
@@ -502,7 +544,6 @@
             <p><b>Ищу крупные проекты, где могу развиваться в сфере управления и организации процессов.</b></p>
         </div>
 
-        <!-- Тэги + повтор контактов с новыми иконками -->
         <div class="compact-badges">
             <span><i class="fas fa-badge-check"></i> Задачи по SMART</span>
             <span><i class="fas fa-badge-check"></i> HTML/CSS/JS</span>
@@ -525,6 +566,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
