@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ирина Андреева · Менеджер проектов · 2026</title>
     <!-- шрифт Inter + иконки Font Awesome 6 (Sharp Light для более тонкого стиля) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,21 +46,15 @@
         .profile-photo {
             text-align: center;
             margin-bottom: 0.5rem;
-            /* полностью убираем любые ограничения по ширине, чтобы фото растянулось */
-            width: 100%;
         }
         .photo-placeholder {
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
         }
         .photo-placeholder img {
             object-fit: cover;
-            width: 100%;              /* теперь фото занимает всю ширину родителя */
-            height: auto;
-            display: block;           /* убирает лишние отступы inline-элемента */
         }
         .sidebar-section {
             border-bottom: 1px solid #346656;  /* тонкая линия светлее фона */
@@ -330,7 +324,6 @@
             text-decoration: none;
             border-bottom: 1px dotted #90bba8;
         }
-        /* ========= АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ ========= */
         @media (max-width:850px) {
             .resume { grid-template-columns: 1fr; }
             .desired-position { grid-template-columns: 1fr; }
@@ -341,50 +334,6 @@
             .exp-date { text-align: left; display: inline-block; width: auto; }
             .name-title h1 { font-size: 2.5rem; }
             .main { padding: 1.5rem; }
-        }
-        /* СПЕЦИАЛЬНО ДЛЯ ФОТО: НА МОБИЛЬНЫХ УБИРАЕМ ВСЕ ОТСТУПЫ СЛЕВА */
-        @media (max-width:850px) {
-            /* левая колонка сбрасывает паддинги по бокам, чтобы фото прижалось к краю */
-            .sidebar {
-                padding-left: 0;
-                padding-right: 0;
-                /* но внутренние отступы у секций оставляем, кроме фото */
-            }
-            /* сам контейнер фото делаем во всю ширину, без отступов */
-            .profile-photo {
-                margin-bottom: 0;
-                width: 100%;
-                padding: 0;
-            }
-            .photo-placeholder {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                line-height: 0;   /* убивает возможные отступы */
-                font-size: 0;
-            }
-            .photo-placeholder img {
-                width: 100%;
-                height: auto;
-                border-radius: 0;  /* если вдруг скругление мешает — убираем (но можно оставить) */
-                display: block;
-            }
-            /* дополнительно страхуем секции внутри sidebar, чтобы текст не прилипал к краям */
-            .sidebar .sidebar-section {
-                padding-left: 1.6rem;
-                padding-right: 1.6rem;
-            }
-            /* но для profile-photo отключаем паддинги, так как это не .sidebar-section */
-            .profile-photo {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-        }
-        /* для очень узких экранов дополнительно обнулим скругление */
-        @media (max-width:480px) {
-            .photo-placeholder img {
-                border-radius: 0;   /* если хотите строго край-в-край, можно оставить 0 */
-            }
         }
     </style>
 </head>
@@ -399,12 +348,12 @@
             </div>
         </div>
         <div class="sidebar-section">
-            <div class="section-title"><i class="fas fa-address-card"></i> Контакты</div>
+            <div class="section-title"><i class="fas fa-address-card"></i> Контакты</div> <!-- иконка заменена -->
             <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>+7 (931) 342-72-97 MAX</span></div>
             <div class="contact-item"><i class="fab fa-telegram"></i><a href="https://t.me/machtbetty" target="_blank">@machtbetty</a></div>
             <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:i_kustova@internet.ru">i_kustova@internet.ru</a></div>
             <div class="contact-item"><i class="fas fa-location-dot"></i><span>Санкт-Петербург</span></div>
-            <div class="contact-item"><i class="fas fa-passport"></i><span>РФ</span></div>
+            <div class="contact-item"><i class="fas fa-passport"></i><span>РФ</span></div> <!-- иконка точнее -->
         </div>
         <div class="sidebar-section">
             <div class="section-title"><i class="fas fa-globe"></i> Языки</div>
