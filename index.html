@@ -331,62 +331,6 @@
             text-decoration: none;
             border-bottom: 1px dotted #90bba8;
         }
-        @media (max-width:850px) {
-            .resume { 
-                grid-template-columns: 1fr; 
-            }
-            .desired-position { 
-                grid-template-columns: 1fr; 
-            }
-            .job-details { 
-                grid-column: span 1; 
-            }
-            .sidebar-content {
-                padding-top: 1.5rem;
-            }
-        }
-        @media (max-width:550px) {
-            .exp-item { 
-                grid-template-columns: 1fr; 
-                gap: 0.8rem;
-            }
-            .exp-date { 
-                text-align: left; 
-                display: inline-block; 
-                width: auto; 
-                margin-bottom: 0.2rem;
-            }
-            .name-title h1 { 
-                font-size: 2.5rem; 
-            }
-            .main { 
-                padding: 1.5rem; 
-            }
-            .desired-position {
-                padding: 1.2rem;
-            }
-            .position-title {
-                font-size: 1.5rem;
-            }
-            .position-salary {
-                font-size: 1.4rem;
-                padding: 0.2rem 1rem;
-                justify-self: start;
-            }
-        }
-        @media (max-width:380px) {
-            .subheadline {
-                flex-direction: column;
-                gap: 0.3rem;
-            }
-            .courses-grid {
-                grid-template-columns: 1fr;
-                gap: 0.3rem;
-            }
-            .courses-grid span:first-child {
-                font-weight: 700;
-            }
-        }
     </style>
 </head>
 <body>
@@ -400,7 +344,7 @@
         <div class="sidebar-content">
             <div class="sidebar-section">
                 <div class="section-title"><i class="fas fa-address-card"></i> Контакты</div>
-                <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>+7 (931) 342-72-97 MAX</span></div>
+                <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>+7 (931) 342-72-97</span></div>
                 <div class="contact-item"><i class="fab fa-telegram"></i><a href="https://t.me/machtbetty" target="_blank">@machtbetty</a></div>
                 <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:i_kustova@internet.ru">i_kustova@internet.ru</a></div>
                 <div class="contact-item"><i class="fas fa-location-dot"></i><span>Санкт-Петербург</span></div>
@@ -413,25 +357,19 @@
                 <div class="lang-item"><span>Немецкий</span> <span class="lang-level">B1</span></div>
             </div>
             <div class="sidebar-section">
-                <div class="section-title"><i class="fas fa-code"></i> Стек технологий</div>
+                <div class="section-title"><i class="fas fa-code"></i> Инструменты и навыки</div>
                 <div class="skill-tags">
-                    <span class="skill-tag">HTML / CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">WordPress</span>
-                    <span class="skill-tag">Tilda / Marquiz</span>
-                    <span class="skill-tag">Salebot / Textback / Chat2Desk / Bothelp</span>
-                    <span class="skill-tag">Битрикс24 CRM / AmoCRM</span>
-                    <span class="skill-tag">Аналитика Roistat</span>
-                    <span class="skill-tag">SMART</span>
-                    <span class="skill-tag">AI Prompt</span>
+                    <span class="skill-tag">HTML / CSS / JS</span>
+                    <span class="skill-tag">WordPress / Tilda</span>
+                    <span class="skill-tag">Создание чат-ботов</span>
+                    <span class="skill-tag">Постановка задач по SMART</span>
+                    <span class="skill-tag">Написание AI-промтов</span>
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="section-title"><i class="fas fa-certificate"></i> Курсы</div>
                 <div class="badge-list">
-                    <span class="badge">JS: продвинутый 2024</span>
+                    <span class="badge">JavaScript: продвинутый 2024</span>
                     <span class="badge">Веб-верстка 2023</span>
                     <span class="badge">Граф. дизайн 2022</span>
                 </div>
@@ -471,30 +409,30 @@
             </div>
         </div>
 
-        <div class="section-main-title"><i class="fas fa-briefcase"></i> Опыт работы — 8 лет 8 месяцев</div>
+        <div class="section-main-title"><i class="fas fa-briefcase"></i> Опыт работы — 8 лет 10 месяцев</div>
 
         <div class="exp-item">
-            <div class="exp-date">февраль 2023 — по н.в <br><span style="font-weight:400;">3 года 2 мес.</span></div>
+            <div class="exp-date">февраль 2023 — по н.в. <br><span style="font-weight:400;">3 года 2 мес.</span></div>
             <div>
                 <div class="exp-company">ChinaToday (маркетинговый отдел)</div>
                 <div class="exp-role">Менеджер проектов (секция лидогенерации / веб-интеграции)</div>
                 <ul class="exp-desc">
-                    <li>Управляю полным циклом создания лендингов и страниц сайта.</li>
-                    <li>Координирую команду разработчиков, дизайнера, редактора и подрядчиков.</li>
-                    <li>Еженедельно формирую задачи по SMART для отдела.</li>
-                    <li>Управляю бюджетом отдела маркетинга (планирование бюджета на месяц, контроль оплат в 1С).</li>
+                    <li>Управляю полным циклом создания лендингов и страниц сайта. Выпускаем 2-3 лид-магнита в месяц.</li>
+                    <li>Координирую работу отдела из 5 человек (веб-разработчик, дизайнер, редактор, копирайтер, SMM-специалист). Ставлю задачи по SMART в Birtix.</li>
+                    <li>Контролирую работу подрядчиков (SEO, таргетологи, рилсмейкеры, авитологи и т.д).</li>
+                    <li>Составляю бюджет отдела маркетинга (~ 4 млн.р. ежемесячно). Веду бюджет в 1С.</li>
                 </ul>
             </div>
         </div>
 
         <div class="exp-item">
-            <div class="exp-date">май 2022 — январь 2023 <br><span style="font-weight:400;">9 мес.</span></div>
+            <div class="exp-date">апрель 2022 — февраль 2023 <br><span style="font-weight:400;">9 мес.</span></div>
             <div>
                 <div class="exp-company">Denero (интернет-маркетинг)</div>
                 <div class="exp-role">Менеджер проектов (IT)</div>
                 <ul class="exp-desc">
-                    <li>Координация команды (дизайнеры, верстальщики, backend) в рамках веб-проектов; контроль качества, тестирование.</li>
-                    <li>Работа с медиапланами, декомпозиция задач, отслеживание дедлайнов.</li>
+                    <li>Координировала команду из 10 человек (дизайнеры, веб-разработчики): постановка задач, контроль качества, тестирование.</li>
+                    <li>Работала с корпоративными клиентами: бюджетирование, составление тех.задания.</li>
                 </ul>
             </div>
         </div>
@@ -505,53 +443,46 @@
                 <div class="exp-company">ЧОУДО Инфинитив (языковая школа)</div>
                 <div class="exp-role">Администратор / проект-координатор</div>
                 <ul class="exp-desc">
-                    <li>Организация документооборота, координация преподавателей (12 чел.), ведение корпоративных клиентов.</li>
-                    <li>Участвовала в запуске онлайн-курсов</li>
+                    <li>Составляла расписание преподавателей (12 чел.), вела корпоративных клиентов.</li>
+                    <li>Работала с клиентами</li>
+                    <li>Участвовала в запуске онлайн-курсов и очных мастер-классов</li>
                 </ul>
             </div>
         </div>
 
         <div class="exp-item">
-            <div class="exp-date">авг 2018 — фев 2019</div>
+            <div class="exp-date">авг 2018 — июль 2019</div>
             <div><span class="exp-company">РТ Инвест Транспортные Системы</span> — специалист по работе с клиентами</div>
+            <li>Занималась выдачей и проверкой спец.оборудования</li>
         </div>
         <div class="exp-item">
-            <div class="exp-date">окт 2017 — апр 2018</div>
+            <div class="exp-date">окт 2017 — авг 2018</div>
             <div><span class="exp-company">СПб ГКУ МФЦ Петроградского района</span> — инженер-инспектор</div>
+            <li>Принимала документы заявителей и консультатровала по государственным и муниципальным услугам</li>
         </div>
 
         <div class="section-main-title"><i class="fas fa-graduation-cap"></i> Образование</div>
         <div class="edu-item"><span class="edu-year">2021</span> <span><span class="institution">РАНХиГС</span> — Юриспруденция (международное право)</span></div>
         <div class="edu-item"><span class="edu-year">2018</span> <span><span class="institution">РАНХиГС</span> — Государственное и муниципальное управление</span></div>
 
-        <div class="section-main-title" style="margin-top:1.5rem;"><i class="fas fa-microchip"></i> Доп. образование & AI-компетенции</div>
+        <div class="section-main-title" style="margin-top:1.5rem;"><i class="fas fa-microchip"></i> Доп. образование</div>
         <div class="courses-grid">
-            <span class="course-year">2025</span> <span><strong>AI для проектов</strong> • prompt-инжиниринг</span>
             <span class="course-year">2024</span> <span><strong>JavaScript Advanced</strong> • Нетология</span>
-            <span class="course-year">2023</span> <span><strong>Веб-верстка (HTML/CSS/JS, JQuery)</strong> • Skillbox</span>
-            <span class="course-year">2022</span> <span><strong>Графический дизайн + Веб-верстка</strong> • СПбГУПТД, WorldSkills</span>
+            <span class="course-year">2023</span> <span><strong>Графический дизайн + Веб-верстка</strong> • СПбГУПТД, WorldSkills</span>
+            <span class="course-year">2022</span> <span><strong>Веб-верстка (HTML/CSS/JS)</strong> • Skillbox</span>
         </div>
 
         <div class="section-main-title"><i class="fas fa-bullseye"></i> Профессиональный профиль</div>
         <div class="about-me">
-            <p><strong>Я менеджер проектов с техническими навыками, специализируюсь на веб-разработке.</strong> Владею вёрсткой, базовым backend, настройкой интеграций, а также навыком составления промтов для AI-генерации контента и кода.</p>
-            <p style="margin-top: 0.8rem;">• Сервисы: Chat2Desk, Salebot, Textback, Bothelp, Unisender, Marquiz, Tilda, AmoCRM, Битрикс24 CRM.<br>
-               • Разработка: HTML/CSS/JS/PHP, Git, API-вызовы. Работа с CMS: WordPress/Tilda. <br>
-               • Генерация идей: через промпты ускоряю создание креативов, прототипов и вспомогательных скриптов.<br>
-               • Управление: SMART-планирование, ведение бюджета, подрядчики, контроль качества.</p>
+            <p><strong>Управляю разработкой цифровых продуктов. Технический бэкграунд позволяет эффективно коммуницировать с разработчиками, дизайнерами и подрядчиками, контролировать качество на всех этапах.</strong></p>
+                <br>
+            <p style="margin-top: 0.8rem;">
+               • Управление: Ведение бюджета отдела маркетинга, декомпозиция задач, контроль дедлайнов, работа с подрядчиками.<br>
+               • Технические навыки: HTML/CSS/JS/PHP, Git, CMS WordPress/Tilda.<br>
                <br>
-            <p><b>Ищу крупные проекты, где могу развиваться в сфере управления и организации процессов.</b></p>
+            <p><b>Ищу позицию в компании с сильными процессами, где смогу применять навыки управления и технического контроля для решения задач.</b></p>
         </div>
 
-        <div class="compact-badges">
-            <span><i class="fas fa-badge-check"></i> Задачи по SMART</span>
-            <span><i class="fas fa-badge-check"></i> HTML/CSS/JS</span>
-            <span><i class="fas fa-badge-check"></i> Битрикс24 CRM/AmoCRM</span>
-            <span><i class="fas fa-badge-check"></i> Wordpress</span>
-            <span><i class="fas fa-badge-check"></i> Управление подрядчиками</span>
-            <span><i class="fas fa-badge-check"></i> Аналитика</span>
-            <span><i class="fas fa-badge-check"></i> AI-промпты</span>
-        </div>
         <div class="footer-contacts">
             <span><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/machtbetty" target="_blank">@machtbetty</a></span>
             <span><i class="fas fa-mobile-alt"></i> +7 (931) 342-72-97</span>
