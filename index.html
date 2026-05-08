@@ -1,5 +1,546 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ирина Андреева · Менеджер проектов</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f5f4;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #1d2f34;
+            padding: 2rem 1rem;
+        }
+
+        .resume {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 45px -15px rgba(20, 50, 40, 0.2);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            overflow: hidden;
+        }
+
+        /* ————— САЙДБАР ————— */
+        .sidebar {
+            background-color: #1d332e;
+            color: #e0ede7;
+        }
+
+        .profile-photo {
+            line-height: 0;
+        }
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .sidebar-content {
+            padding: 2rem 1.6rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section-title {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #9cc0b2;
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #d0e3db;
+        }
+        .contact-item i {
+            width: 20px;
+            color: #84b3a2;
+            font-size: 1rem;
+        }
+        .contact-item a {
+            color: #d0e3db;
+            text-decoration: none;
+            border-bottom: 1px dotted #548072;
+        }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 0.9rem;
+            color: #d0e3db;
+        }
+        .lang-level {
+            color: #aacfc0;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.78rem;
+            border: 1px solid #3f695b;
+            color: #deeee6;
+            font-weight: 500;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .badge {
+            background: #2a4b41;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            border: 1px solid #457a66;
+        }
+
+        .personal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .personal-tag {
+            font-size: 0.85rem;
+            color: #d0e7dd;
+            border-bottom: 1px dotted #457a66;
+            padding-bottom: 0.1rem;
+        }
+
+        /* ————— ОСНОВНАЯ ЧАСТЬ ————— */
+        .main {
+            background: white;
+            padding: 2.5rem 2.8rem;
+        }
+
+        .name-title h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #1b3a31;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+        .subheadline {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: #5f8377;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .subheadline i {
+            margin-right: 5px;
+            color: #729b8c;
+        }
+
+        .desired-position {
+            margin: 2rem 0 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #eaf1ee;
+        }
+        .position-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+        .position-title {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #1f4036;
+        }
+        .position-salary {
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: #256b50;
+        }
+        .job-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 0.5rem;
+            color: #4e7b6b;
+            font-weight: 500;
+        }
+        .job-details i {
+            width: 22px;
+            color: #256b50;
+        }
+
+        .section-main-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #1f3f37;
+            margin: 2rem 0 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .section-main-title i {
+            color: #256b50;
+            font-size: 1.3rem;
+            width: 28px;
+        }
+
+        .exp-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .exp-date {
+            font-weight: 500;
+            color: #256b50;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            padding-top: 0.1rem;
+        }
+        .exp-company {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #1b3a31;
+        }
+        .exp-role {
+            font-weight: 500;
+            color: #4e7768;
+            margin: 0.2rem 0 0.6rem;
+            font-size: 0.95rem;
+        }
+        .exp-desc {
+            font-size: 0.95rem;
+            color: #2e4a42;
+            list-style: none;
+        }
+        .exp-desc li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.4rem;
+            position: relative;
+        }
+        .exp-desc li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #7faf9b;
+        }
+
+        .edu-item, .course-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .edu-year, .course-year {
+            font-weight: 500;
+            color: #256b50;
+        }
+        .institution {
+            font-weight: 600;
+            color: #1d322c;
+        }
+
+        .about-me {
+            border: 1px solid #e0eee7;
+            background: #f9fdfb;
+            padding: 1.8rem 2rem;
+            border-radius: 24px;
+            margin: 1.5rem 0 2rem;
+            font-size: 0.95rem;
+            color: #235542;
+        }
+
+        .footer-contacts {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 2px solid #eaf1ee;
+            color: #4e7b6b;
+            font-size: 0.95rem;
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-contacts a {
+            color: #1f5f49;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9d9cd;
+        }
+
+        @media (max-width: 800px) {
+            .resume { grid-template-columns: 1fr; }
+            .main { padding: 2rem; }
+        }
+        @media (max-width: 550px) {
+            .exp-item { grid-template-columns: 1fr; gap: 0.3rem; }
+            .name-title h1 { font-size: 2.5rem; }
+            .position-title { font-size: 1.6rem; }
+            .position-salary { font-size: 1.4rem; }
+            .edu-item, .course-item { grid-template-columns: 1fr; gap: 0.2rem; }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="resume">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <div class="profile-photo">
+                    <img src="ava_irina_rec.png" alt="Ирина Андреева">
+                </div>
+                <div class="sidebar-content">
+                    <!-- контакты -->
+                    <div>
+                        <div class="section-title">Контакты</div>
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>+7 (931) 342-72-97
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <a href="https://t.me/machtbetty">@machtbetty</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:i_kustova@internet.ru">i_kustova@internet.ru</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-location-dot"></i>Санкт-Петербург
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-passport"></i>РФ
+                        </div>
+                    </div>
+                    <!-- языки -->
+                    <div>
+                        <div class="section-title">Языки</div>
+                        <div class="lang-item">
+                            <span>Русский</span>
+                            <span class="lang-level">Родной</span>
+                        </div>
+                        <div class="lang-item">
+                            <span>Английский</span>
+                            <span class="lang-level">B1</span>
+                        </div>
+                        <div class="lang-item">
+                            <span>Немецкий</span>
+                            <span class="lang-level">B1</span>
+                        </div>
+                    </div>
+                    <!-- навыки -->
+                    <div>
+                        <div class="section-title">Навыки</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML / CSS / JS</span>
+                            <span class="skill-tag">Чат-боты</span>
+                            <span class="skill-tag">WordPress / Tilda</span>
+                            <span class="skill-tag">Битрикс24</span>
+                            <span class="skill-tag">Управление бюджетом</span>
+                        </div>
+                    </div>
+                    <!-- курсы -->
+                    <div>
+                        <div class="section-title">Курсы</div>
+                        <div class="badge-list">
+                            <span class="badge">JavaScript 2024</span>
+                            <span class="badge">Веб-верстка 2023</span>
+                            <span class="badge">Граф. дизайн 2022</span>
+                        </div>
+                    </div>
+                    <!-- личные качества -->
+                    <div>
+                        <div class="section-title">Личные качества</div>
+                        <div class="personal-tags">
+                            <span class="personal-tag">Самоорганизация</span>
+                            <span class="personal-tag">Ориентация на результат</span>
+                            <span class="personal-tag">Командная коммуникация</span>
+                            <span class="personal-tag">Декомпозиция</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main -->
+            <div class="main">
+                <div class="name-title">
+                    <h1>Ирина Андреева</h1>
+                    <div class="subheadline">
+                        <span>
+                            <i class="fas fa-venus"></i>30 лет (27.01.1996)
+                        </span>
+                        <span>
+                            <i class="fas fa-briefcase"></i>Опыт 8 лет 8 мес.
+                        </span>
+                        <span>
+                            <i class="fas fa-clock"></i>на связи: 09:00–21:00 МСК
+                        </span>
+                    </div>
+                </div>
+                <!-- позиция -->
+                <div class="desired-position">
+                    <div class="position-row">
+                        <span class="position-title">Менеджер проектов</span>
+                        <span class="position-salary">от 100 000 ₽</span>
+                    </div>
+                    <div style="font-size:1rem; color:#4d7265; margin: 0.2rem 0 0.8rem;">веб-проекты / управление</div>
+                    <div class="job-details">
+                        <span>
+                            <i class="fas fa-calendar-week"></i> полный день
+                        </span>
+                        <span>
+                            <i class="fas fa-laptop-house"></i> гибрид / удалёнка
+                        </span>
+                        <span>
+                            <i class="fas fa-subway"></i> транспортная доступность до 1ч
+                        </span>
+                    </div>
+                </div>
+                <!-- опыт работы -->
+                <div class="section-main-title">
+                    <i class="fas fa-briefcase"></i>Опыт работы
+                </div>
+                <div class="exp-item">
+                    <div class="exp-date">февраль 2023 — н.в.
+                        <br>3 года 3 мес.
+                    </div>
+                    <div>
+                        <div class="exp-company">ChinaToday (логистика из Китая, маркетинговый отдел)</div>
+                        <div class="exp-role">Менеджер проектов</div>
+                        <ul class="exp-desc">
+                            <li>Управляю полным циклом создания лендингов и лид-магнитов. Выпускаем 2–3 новых лид-магнита в месяц.</li>
+                            <li>Занимаюсь контентным наполнением сайта на базе Wordpress. Выполняю технические задачи по SEO оптимизации.</li>
+                            <li>Создаю продающие воронки для B2B с конверсией 50–70% в лида.</li>
+                            <li>Координирую отдел из 5 человек (разработчик, дизайнер, редактор, копирайтер, SMM). Контролирую дедлайны в Битрикс24.</li>
+                            <li>Контролирую подрядчиков (SEO, таргетологи, рилсмейкеры, авитологи).</li>
+                            <li>Веду бюджет отдела в 1С (до 4 млн ₽/мес). Оптимизировала бюджет, сократив нецелевые расходы на 12% через пересмотр условий с подрядчиками.</li>
+                            <li>Организовала запуск калькулятор доставки из Китая (<a href="https://calc.chinatoday.ru/" target="_blank" style="color: #256b50; text-decoration: none; border-bottom: 1px dotted #b9d9cd;">calc.chinatoday.ru</a>). Инструмент повысил целевые заявки на 15%.</li>
+                            <li>Организовала совместный вебинар с Moneyplace. Привлекла 200+ новых участников.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-date">апрель 2022 — фев 2023
+                        <br>9 мес.
+                    </div>
+                    <div>
+                        <div class="exp-company">Denero (интернет-маркетинг)</div>
+                        <div class="exp-role">Менеджер проектов</div>
+                        <ul class="exp-desc">
+                            <li>Координировала команду из 10 человек (дизайнеры, веб-разработчики): постановка задач, контроль качества, тестирование.</li>
+                            <li>Управляла бюджетами клиентов до 2 млн ₽, составляла ТЗ и контролировала исполнение.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-date">июль 2019 — апр 2022
+                        <br>2 года 10 мес.
+                    </div>
+                    <div>
+                        <div class="exp-company">ЧОУДО Инфинитив (языковая школа)</div>
+                        <div class="exp-role">Администратор / проект-координатор</div>
+                        <ul class="exp-desc">
+                            <li>Составляла расписание преподавателей (12 чел.), вела корпоративных клиентов.</li>
+                            <li>Участвовала в запуске онлайн-курсов и очных мастер-классов (окупаемость проектов — до 6 мес).</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- образование -->
+                <div class="section-main-title">
+                    <i class="fas fa-graduation-cap"></i>Образование
+                </div>
+                <div class="edu-item">
+                    <span class="edu-year">2018</span>
+                    <span>
+                        <span class="institution">РАНХиГС</span> — Государственное и муниципальное управление (бакалавр)</span>
+                </div>
+                <!-- доп. образование -->
+                <div class="section-main-title">
+                    <i class="fas fa-microchip"></i>Доп. образование
+                </div>
+                <div class="course-item">
+                    <span class="course-year">2024</span>
+                    <span>
+                        <strong>JavaScript Advanced</strong> • Нетология
+                    </span>
+                </div>
+                <div class="course-item">
+                    <span class="course-year">2023</span>
+                    <span>
+                        <strong>Графический дизайн/Веб-верстка</strong> • СПбГУПТД, WorldSkills
+                    </span>
+                </div>
+                <div class="course-item">
+                    <span class="course-year">2022</span>
+                    <span>
+                        <strong>Веб-верстка (HTML/CSS/JS)</strong> • Skillbox
+                    </span>
+                </div>
+                <!-- профессиональный профиль -->
+                <div class="section-main-title">
+                    <i class="fas fa-bullseye"></i>Профессиональный профиль
+                </div>
+                <div class="about-me">
+                    <p>
+                        <strong>Управляю созданием веб-проектов от идеи до запуска. Опыт в сфере веб-разработки позволяет мне находить общий язык с программистами, дизайнерами и подрядчиками, быстро оценивать риски и контролировать качество на всех этапах.</strong>
+                    </p>
+                    <br>
+                    <p>• Управление командой: контроль дедлайнов, мотивация, постановка задач.
+                        <br>
+                        • Технический фундамент: верстка, базовый JS/PHP, работа с API, понимание того, как устроен продукт внутри.
+                    </p>
+                    <br>
+                    <p>
+                        <b>Ищу позицию, где смогу применить свой опыт в управлении проектами и командами, решать нестандартные задачи и видеть реальный результат своей работы.</b>
+                    </p>
+                </div>
+                <!-- контакты внизу -->
+                <div class="footer-contacts">
+                    <span>
+                        <i class="fab fa-telegram"></i> Telegram:
+                        <a href="https://t.me/machtbetty">@machtbetty</a>
+                    </span>
+                    <span>
+                        <i class="fas fa-mobile-alt"></i> +7 (931) 342-72-97
+                    </span>
+                    <span>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:i_kustova@internet.ru">i_kustova@internet.ru</a>
+                    </span>
+                </div>
+                <div style="color:#7f9f93; font-size:0.8rem; text-align:right; margin-top:0.8rem;">2026 · Менеджер проектов</div>
+            </div>
+        </div>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
